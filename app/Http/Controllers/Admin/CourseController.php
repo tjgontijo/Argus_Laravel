@@ -49,6 +49,12 @@ class CourseController extends Controller
         }elseif (Auth()->user()->hasPermissionTo('apmb')) 
         {            
             $courses = $this->course->where('unit_teach_id','1')->get();
+        }elseif (Auth()->user()->hasPermissionTo('cmt')) 
+        {            
+            $courses = $this->course->where('unit_teach_id','4')->get();
+        }elseif (Auth()->user()->hasPermissionTo('iscp')) 
+        {            
+            $courses = $this->course->where('unit_teach_id','5')->get();
         }
        
         
@@ -142,7 +148,7 @@ class CourseController extends Controller
 
         if (Auth()->user()->hasPermissionTo('dec'))
         {
-            $units = $this->unit->find([1,2,3]);            
+            $units = $this->unit->find([1,2,3,4,5]);            
 
         }elseif (Auth()->user()->hasPermissionTo('caeap'))
         {
@@ -155,6 +161,12 @@ class CourseController extends Controller
         }elseif (Auth()->user()->hasPermissionTo('apmb')) 
         {
             $units = $this->unit->find([1]);
+        }elseif (Auth()->user()->hasPermissionTo('cmt')) 
+        {
+            $units = $this->unit->find([4]);
+        }elseif (Auth()->user()->hasPermissionTo('iscp')) 
+        {
+            $units = $this->unit->find([5]);
         }
 
         $types = $this->type->all();
