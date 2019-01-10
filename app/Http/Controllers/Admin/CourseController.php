@@ -65,7 +65,7 @@ class CourseController extends Controller
      
         if (Auth()->user()->hasPermissionTo('dec'))
         {
-            $units = $this->unit->find([1,2,3]);            
+            $units = $this->unit->find([1,2,3,4]);            
 
         }elseif (Auth()->user()->hasPermissionTo('caeap'))
         {
@@ -78,6 +78,9 @@ class CourseController extends Controller
         }elseif (Auth()->user()->hasPermissionTo('apmb')) 
         {
             $units = $this->unit->find([1]);
+        }elseif (Auth()->user()->hasPermissionTo('cmt')) 
+        {
+            $units = $this->unit->find([4]);
         }
         
         $types = $this->type->all();
