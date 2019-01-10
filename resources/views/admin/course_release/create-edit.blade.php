@@ -48,7 +48,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="course_id">Curso:</label>  
-                            <select class="form-control" id="course_id" name="course_id" value="">
+                            <select class="form-control" id="course_id" name="course_id" value="" required>
                                 <option value=""></option>
                                 @foreach($courses as $course)
                                 <option value="{{$course->id}}"
@@ -65,7 +65,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="status_release_id">Status:</label>  
-                                <select class="form-control" id="status_release_id" name="status_release_id">
+                                <select class="form-control" id="status_release_id" name="status_release_id" required>
                                     <option value=""></option>
                                     @foreach($status_releases as $status_release)
                                     <option value="{{$status_release->id}}"
@@ -134,19 +134,19 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 {!! Form::label('vacancies', 'Vagas Abertas:') !!}
-                                {!! Form::text('vacancies', null, ['class' => 'form-control']) !!} 
+                                {!! Form::number('vacancies', null, ['class' => 'form-control']) !!} 
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 {!! Form::label('vacancies_fill', 'Vagas Preenchidas:') !!}
-                                {!! Form::text('vacancies_fill', null, ['class' => 'form-control']) !!} 
+                                {!! Form::number('vacancies_fill', null, ['class' => 'form-control']) !!} 
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 {!! Form::label('vacancies_conclusive', 'Vagas Concludentes:') !!}
-                                {!! Form::text('vacancies_conclusive', null, ['class' => 'form-control']) !!} 
+                                {!! Form::number('vacancies_conclusive', null, ['class' => 'form-control']) !!} 
                             </div>
                         </div>
                     </div>
