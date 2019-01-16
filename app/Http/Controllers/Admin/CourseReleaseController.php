@@ -79,6 +79,7 @@ class CourseReleaseController extends Controller
                         'courses.unit_teach_id as unidade_id',
                         'course_types.type as course_type')            
             ->where('courses.unit_teach_id', '>', '0')
+            ->orderBy('course_releases.id')
             ->get()->toArray();
 
         }elseif (Auth()->user()->hasPermissionTo('caeap'))
@@ -98,6 +99,7 @@ class CourseReleaseController extends Controller
                         'courses.unit_teach_id as unidade_id',
                         'course_types.type as course_type')            
             ->where('courses.unit_teach_id', '=', '2')
+            ->orderBy('course_releases.id')
             ->get()->toArray();
             
 
@@ -117,7 +119,8 @@ class CourseReleaseController extends Controller
                         'course_types.name as course_type_name',
                         'courses.unit_teach_id as unidade_id',
                         'course_types.type as course_type')                 
-            ->where('courses.unit_teach_id', '=', '3')            
+            ->where('courses.unit_teach_id', '=', '3')     
+            ->orderBy('course_releases.id')       
             ->get()->toArray();
 
         }elseif (Auth()->user()->hasPermissionTo('apmb')) 

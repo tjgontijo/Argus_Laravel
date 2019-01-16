@@ -25,6 +25,7 @@
     <table class="table table-hover table-striped table-responsive table-bordered">				
             <thead>
                 <tr>                    
+                    <th class="text-center">ID</th>
                     <th class="text-center">Curso</th>
                     <th class="text-center">Unidade Responsável</th>
                     <th class="text-center">Início Programado</th>
@@ -46,6 +47,7 @@
             @else
             <tr>
                 @endif
+                <td class=text-center>{{$course_release->id}}</td>
                 <td title="{{$course_release->nome_curso}}" ><b>{{$course_release->nome_curso_short}}</b></td>
                 <td title="{{$course_release->unit_name}}" class="text-center">{{$course_release->unit_short_name}}</td>   
                 @if($course_release->date_schedule_start <> NULL)
