@@ -65,7 +65,7 @@ date_default_timezone_set('America/Sao_Paulo');
                     </table>
                 </div>                
                 <div class="box-footer">
-                    <input type="button" value="Voltar" onclick="history.back()" class="btn btn-warning"></input>
+                    <a href="{{route('course_release.index')}}" class="btn btn-warning">Voltar</a>
                 </div>
             </div>
         </div>
