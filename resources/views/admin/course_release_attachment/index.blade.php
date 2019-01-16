@@ -10,6 +10,7 @@ date_default_timezone_set('America/Sao_Paulo');
     <h1>Anexos</h1>
     <ol class="breadcrumb">
         <li><a href="{{route('admin.home')}}"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li><a href="{{route('course_release.index')}}">Cursos Publicados</a></li>
         <li class="active">Anexos</li>
     </ol>
 </section>
@@ -64,7 +65,7 @@ date_default_timezone_set('America/Sao_Paulo');
                     </table>
                 </div>                
                 <div class="box-footer">
-                    <input type="button" value="Voltar" onclick="history.back()" class="btn btn-warning"></input>
+                    <input type="button" value="Voltar" onclick="{{route('course_release.index')}}" class="btn btn-warning"></input>
                 </div>
             </div>
         </div>
