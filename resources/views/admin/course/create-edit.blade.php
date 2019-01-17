@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="unit_teach_id">Unidade de Responsável:</label>      
+                <label for="unit_teach_id">Unidade Responsável:</label>      
             <select class="form-control" id="unit_teach_id" name="unit_teach_id" required>
                     <option value=""></option>
                     @foreach($units as $unit)
@@ -69,7 +69,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="unit_executing_id">Unidade Executora:</label>      
+                <label for="unit_executing_id">Unidade Executora do Curso:</label>      
                 <select class="form-control" id="unit_executing_id" name="unit_executing_id" required>
                     <option value=""></option>                    
                     @foreach($units_executing as $unit_all)
@@ -82,7 +82,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="course_type_id">Tipo de Cursos:</label>      
+                <label for="course_type_id">Tipo de Curso:</label>      
             <select class="form-control" id="course_type_id" name="course_type_id">
                     <option value=""></option>
                     @foreach($types as $type)
