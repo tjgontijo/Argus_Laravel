@@ -56,6 +56,10 @@ class CourseController extends Controller
         {            
             $courses = $this->course->where('unit_teach_id','5')->get();
         }
+        elseif (Auth()->user()->hasPermissionTo('dae')) 
+        {            
+            $courses = $this->course->where('unit_teach_id','6')->get();
+        }
        
         
         return view('admin.course.index', compact('courses'));
@@ -90,6 +94,10 @@ class CourseController extends Controller
         }elseif (Auth()->user()->hasPermissionTo('iscp')) 
         {
             $units = $this->unit->find([5]);
+        }
+        elseif (Auth()->user()->hasPermissionTo('dae')) 
+        {            
+            $courses = $this->course->where('unit_teach_id','6')->get();
         }
         
         $types = $this->type->all();
@@ -168,7 +176,10 @@ class CourseController extends Controller
         {
             $units = $this->unit->find([5]);
         }
-
+        elseif (Auth()->user()->hasPermissionTo('dae')) 
+        {            
+            $courses = $this->course->where('unit_teach_id','6')->get();
+        }
         $types = $this->type->all();
 
         $units_executing = $this->unit_executing->all();        
